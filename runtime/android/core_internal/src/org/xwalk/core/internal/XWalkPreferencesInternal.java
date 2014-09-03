@@ -35,8 +35,10 @@ public class XWalkPreferencesInternal {
 
     /**
      * The key string to enable/disable animatable XWalkViewInternal. Default value is
-     * false.
+     * true.
      *
+     * If this key is set to False, then SurfaceView will be created internally as the
+     * rendering backend.
      * If this key is set to True, the XWalkViewInternal created by Crosswalk can be
      * transformed and animated. Internally, Crosswalk is alternatively using
      * TextureView as the backend of XWalkViewInternal.
@@ -87,7 +89,7 @@ public class XWalkPreferencesInternal {
 
     static {
         sPrefMap.put(REMOTE_DEBUGGING, Boolean.FALSE);
-        sPrefMap.put(ANIMATABLE_XWALK_VIEW, Boolean.FALSE);
+        sPrefMap.put(ANIMATABLE_XWALK_VIEW, Boolean.TRUE);
         sPrefMap.put(ENABLE_JAVASCRIPT, Boolean.TRUE);
         sPrefMap.put(JAVASCRIPT_CAN_OPEN_WINDOW, Boolean.TRUE);
         sPrefMap.put(
